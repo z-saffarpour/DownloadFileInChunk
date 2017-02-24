@@ -1,0 +1,17 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="BasicHttpBinding_IDownloadFile" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:2162/Service/DownloadFile.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IDownloadFile"
+                contract="DownloadFile.IDownloadFile" name="BasicHttpBinding_IDownloadFile" />
+        </client>
+    </system.serviceModel>
+</configuration>
